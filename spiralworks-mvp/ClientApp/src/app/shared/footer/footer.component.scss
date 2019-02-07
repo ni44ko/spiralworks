@@ -1,0 +1,12 @@
+@import './../../../assets/scss/variables.scss';
+
+.footer-wrapper{
+    height:100px;
+    font-family: $font-family-josefin;
+    border-top:1px solid $color-border;
+}
+
+.footer-text{
+    color: $footer-color-content;
+    
+}

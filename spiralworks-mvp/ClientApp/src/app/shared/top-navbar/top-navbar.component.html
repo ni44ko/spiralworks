@@ -1,0 +1,19 @@
+<nav class="navbar navbar-top">
+  <div class="img-wrapper">
+    <img src="./../../../assets/images/logo.jpg" class="img-logo">
+  </div><br />
+
+  <div class="menu-items-wrapper pull-right">
+    <ul class="menu-list-items list-inline ">
+      <li *ngIf="showRegisterMenu" class="list-inline-item"><i class="fas fa-pen"></i><a href="#"
+          [class.active]="activeLink === 1" (click)="linkClick(1)">register</a></li>
+      <li *ngIf="showRegisterMenu" class="list-inline-item"><i class="fas fa-sign-in-alt"></i><a [class.active]="activeLink === 2"
+          (click)="gotoLogin()">go back login page</a></li>
+      <li *ngIf="!showRegisterMenu" class="list-inline-item"><i class="fas fa-user-alt"></i><a href="#"
+          [class.active]="activeLink === 1" (click)="linkClick(1)">profile</a></li>
+      <li *ngIf="!showRegisterMenu" class="list-inline-item"><i class="fas fa-sign-out-alt"></i><a [class.active]="activeLink === 2"
+          (click)="gotoLogin()">logout</a></li>
+
+    </ul>
+  </div>
+</nav>

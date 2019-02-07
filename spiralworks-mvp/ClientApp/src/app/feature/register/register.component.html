@@ -1,0 +1,56 @@
+<app-top-navbar></app-top-navbar>
+<main class="container main">
+
+  <!-- Login Form -->
+  <form [formGroup]="registerForm" >
+    <div class="row register-form">
+
+      <div class="col-md-6 m-auto" id="formContent">
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="first name" name="firstName" formControlName="firstName" />
+          <div class="validation-message" *ngIf="!fc.firstName.valid">
+            <div *ngIf="submitted && fc.firstName.errors.required">first name is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="last name" name="lastName" formControlName="lastName" />
+          <div class="validation-message" *ngIf="!fc.lastName.valid">
+            <div *ngIf="submitted && fc.lastName.errors.required">last name is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="email address" name="email" formControlName="email" />
+          <div class="validation-message" *ngIf="!fc.email.valid">
+            <div *ngIf="submitted && fc.email.errors.required">email is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="phone" name="phone" formControlName="phone" />
+          <div class="validation-message" *ngIf="!fc.phone.valid">
+            <div *ngIf="submitted && fc.phone.errors.required">phone is required.</div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="password" name="password" formControlName="password" />
+          <div class="validation-message" *ngIf="!fc.password.valid">
+            <div *ngIf="submitted && fc.password.errors.required">password is required.</div>
+          </div>
+        </div>
+
+        <input type="submit" class="fadeIn fourth" value="Register" (click)="submitForm()">
+      
+      </div>
+
+
+
+    </div>
+
+
+  </form>
+</main>

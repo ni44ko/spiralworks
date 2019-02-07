@@ -1,0 +1,36 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <div class="img-wrapper">
+        <img src="./../../../assets/images/logo.jpg" class="img-logo">
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="loginForm">
+      <input type="text" class="form-control" placeholder="email/phone" name="username" formControlName="username" /><span
+        class="red">*</span>
+      <div class="validation-message" *ngIf="!fc.username.valid">
+        <div *ngIf="submitted && fc.username.errors.required">email/phone is required.</div>
+      </div>
+      <input type="text" class="form-control" placeholder="password" name="password" formControlName="password" /><span
+        class="red">*</span>
+      <div class="validation-message" *ngIf="!fc.password.valid">
+        <div *ngIf="submitted && fc.password.errors.required">password is required.</div>
+      </div>
+      <input type="submit" class="fadeIn fourth" value="Log In" (click)="submitForm()">
+      <div *ngIf="errorMsg" class="alert alert-danger">
+        Login Failed.
+      </div>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="/register">Register</a>
+    </div>
+
+  </div>
+</div>

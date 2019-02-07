@@ -1,0 +1,57 @@
+@import './../../../assets/scss/variables.scss';
+
+.navbar-top {
+    background-color: $color-white;
+    max-width: 1180px;
+    margin: 0 auto;
+    border-bottom: 1px solid $color-border;
+    font-size: 12px;
+}
+
+.brand1,
+.brand2 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: $font-family-questrial;
+    color: $color-gray;
+    text-transform: capitalize;
+    border: 1px solid;
+    padding: 2px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.brand2 {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    border-right: none;
+    background-color: #21D16F;
+    color: #fff;
+}
+
+ul.menu-list-items {
+    margin-bottom: 0;
+}
+
+ul.menu-list-items li {
+    margin-left: 30px;
+}
+
+ul.menu-list-items li a {
+    cursor: pointer;
+    font-family: $font-family-questrial;
+    color: $color-gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+ul.menu-list-items li a:hover,
+ul.menu-list-items li a.active {
+    // color: $navbar-link-hover;
+    font-weight: bold;
+    text-decoration: underline;
+}
